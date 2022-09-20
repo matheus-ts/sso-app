@@ -1,5 +1,6 @@
-<router-outlet></router-outlet>
+<div class="m-5">
+  <button (click)="login()" *ngIf="!token">Login</button>
+  <button (click)="logout()" *ngIf="token">LogOut</button>
+</div>
 
-<h2>
-  Olá
-</h2>
+<router-outlet *ngIf="token"></router-outlet>
